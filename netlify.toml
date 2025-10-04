@@ -1,0 +1,21 @@
+# netlify.toml for Clover Project
+
+[build]
+  # Base directory for the frontend
+  base = "frontend"
+  
+  # Publish folder after frontend build
+  publish = "dist"
+  
+  # Build command: prepare backend dependencies + build frontend
+  command = "cd ../backend && yarn install && echo 'Backend ready' && cd ../frontend && yarn install && yarn build"
+
+# Environment variables
+[build.environment]
+  NODE_VERSION = "18"
+
+# SPA routing - redirects all requests to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
