@@ -26,7 +26,13 @@ app.use('/meeting/*', express.static(`${__dirname}/../frontend/dist`));
 const server = http.createServer(app);
 store.app = app;
 store.config = Config;
-store.io = io(server);
+store.io = io(server, {
+  cors: {
+    origin: "*", // or list your frontend domains
+    methods: ["GET", "POST"],
+  },
+});
+
 init();
 mediasoup.init();
 
