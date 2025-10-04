@@ -1,0 +1,17 @@
+{
+  "name": "clover",
+  "author": "Honeyside",
+  "version": "2.9.1",
+  "private": true,
+  "engines": {
+    "node": "18.x.x"
+  },
+  "description": "Clover is an instant messaging & conferencing web app with audio / video capabilities, both in one-to-one calls and in group calls with multiple remote peers!",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
